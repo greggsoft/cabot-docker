@@ -1,7 +1,7 @@
 name: cabot
 
 ships:
-  vm1: {ip: __FIX_ME__ ,docker_port: 4243}
+  vm1: {ip: 192.168.0.37 ,docker_port: 4243}
 services:
   cabot_web:
     image: wondermall/cabot
