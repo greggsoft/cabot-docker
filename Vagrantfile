@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
     curl -# https://bootstrap.pypa.io/get-pip.py|sudo python
     pip install --user --upgrade git+git://github.com/signalfuse/maestro-ng
     wget -qO- https://get.docker.com/ | sh
-    echo -e `cat /etc/default/docker`"\n\nDOCKER_OPTS=\"-H tcp://192.168.0.37:4243\""|sudo tee /etc/default/docker
+    echo -e "`cat /etc/default/docker`\n\nDOCKER_OPTS=\\"-H tcp://192.168.0.37:4243\\""|sudo tee /etc/default/docker
     sudo service docker restart
     python -m maestro -f /vagrant/maestro.yml start
   SHELL
